@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Portfolio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <h1>My Portfolio</h1>
+        </nav>
+    </header>
+
+    <main>
+        <section class="projects">
+            <h2>My Projects</h2>
+            <div class="project-grid">
+                <!-- Project 1 -->
+                <a href="project1.html" class="project-card">
+                    <div class="project-image">
+                        <img src="projects/project1.jpg" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project 1</h3>
+                        <p>Brief description of project 1. Click to learn more about this exciting project and its features.</p>
+                    </div>
+                </a>
+
+                <!-- Project 2 -->
+                <a href="project2.html" class="project-card">
+                    <div class="project-image">
+                        <img src="projects/project2.jpg" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Project 2</h3>
+                        <p>Brief description of project 2. Click to learn more about this innovative project and its implementation.</p>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Project Modal -->
+    <div class="modal" id="projectModal">
+        <div class="modal-content">
+            <span class="close-button">&times;</span>
+            <div class="modal-body">
+                <!-- Content will be dynamically inserted here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 My Portfolio. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 

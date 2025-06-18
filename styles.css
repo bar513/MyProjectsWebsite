@@ -1,0 +1,223 @@
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/* Header styles */
+header {
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav h1 {
+    font-size: 1.5rem;
+    color: #2c3e50;
+    text-align: center;
+}
+
+/* Main content */
+main {
+    max-width: 900px;
+    margin: 1rem auto;
+    padding: 0 1rem;
+}
+
+.projects h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #2c3e50;
+    font-size: 2rem;
+}
+
+/* Project grid - now a list */
+.project-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+/* Project cards */
+.project-card {
+    background: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    flex-direction: row;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+.project-image {
+    width: 40%;
+    min-height: 200px;
+    overflow: hidden;
+}
+
+.project-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.project-info {
+    padding: 1.5rem;
+    width: 60%;
+}
+
+.project-info h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.project-info p {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: #fff;
+    margin-top: 4rem;
+    box-shadow: 0 -2px 4px rgba(0,0,0,0.1);
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+    .project-card {
+        flex-direction: column;
+    }
+    
+    .project-image,
+    .project-info {
+        width: 100%;
+    }
+    
+    .project-image {
+        min-height: 200px;
+    }
+    
+    main {
+        margin: 0.5rem auto;
+    }
+    
+    .projects h2 {
+        font-size: 1.75rem;
+        margin-bottom: 1rem;
+    }
+    
+    .project-grid {
+        gap: 1rem;
+        padding: 0.5rem;
+    }
+}
+
+/* Project detail page styles */
+.project-detail {
+    background: #fff;
+    border-radius: 10px;
+    padding: 2rem;
+    margin: 2rem auto;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.project-detail img {
+    width: 100%;
+    max-height: 400px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin: 1rem 0;
+}
+
+.project-detail h2 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+}
+
+.project-detail .features {
+    margin: 2rem 0;
+}
+
+.project-detail .features h3 {
+    color: #2c3e50;
+    margin-bottom: 0.5rem;
+}
+
+.project-detail .features ul {
+    list-style-position: inside;
+    margin-left: 1rem;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 0.5rem 1rem;
+    background-color: #2c3e50;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+    background-color: #34495e;
+}
+
+/* Modal styles */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
+    z-index: 1000;
+}
+
+.modal-content {
+    position: relative;
+    background-color: #fff;
+    margin: 5% auto;
+    padding: 2rem;
+    width: 90%;
+    max-width: 800px;
+    border-radius: 10px;
+    max-height: 90vh;
+    overflow-y: auto;
+}
+
+.close-button {
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #666;
+}
+
+.close-button:hover {
+    color: #333;
+} 
